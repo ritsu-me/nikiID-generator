@@ -1,4 +1,5 @@
-const generateRandomString = (num) => {
+//NOTE:Function for creating Crypto
+function createCrypto(num) {
     const characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@-_+*\^~!#$%&";
     let result = '';
     const charactersLength = characters.length;
@@ -6,5 +7,9 @@ const generateRandomString = (num) => {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }return result;
 }
-randomStr = generateRandomString(128);
-console.log(randomStr);
+
+//NOTE:Send Crypto to console
+console.log(createCrypto(126));
+
+//NOTE:Exports Crypto to other file
+module.exports.createCrypto = createCrypto(126)
